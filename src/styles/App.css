@@ -39,12 +39,19 @@
 }
 .backward-link:before {
   content: '\21E6';
-  padding: 10px;
   }
 
   .backward-link {
-    display: inline;
-    padding: 20px;
-    color: white;
+    color: rgb(59, 56, 56);
+    padding: 50px;
     font-weight:bold;
+    text-decoration: none !important;
+    }
+
+    .pagination {
+      justify-self: center;
+      justify-content: center;
+      position: relative;
+      padding-left: 30%;
+      margin:30px 10px 10px 10px;
     }

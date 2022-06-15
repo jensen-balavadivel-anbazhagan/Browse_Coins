@@ -1,16 +1,13 @@
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
 import Card from "@mui/material/Card";
 import { styled } from "@mui/material/styles";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import CoinsService from "../store/CoinsService";
 
 const CoinItem = (props) => {
   const navigate = useNavigate();
   const coinData = props.coinData;
-  const [coinDetail, setCoinDetail] = useState();
   const Img = styled("img")({
     margin: "5% auto auto auto",
     display: "block",
@@ -21,26 +18,8 @@ const CoinItem = (props) => {
   const coinClick = () => {
     navigate("/coinData", {
       state: {
-        coinData: coinDetail,
+        coinData: coinData.id,
       },
-    });
-  };
-
-  useEffect(() => {
-    getCoinDetailsById();
-  }, []);
-
-  //Method to get the details of the coin by ID
-  const getCoinDetailsById = () => {
-    CoinsService.getCoinDetailsById(coinData.id).then((data) => {
-      if (data) {
-        setCoinDetail(data);
-      } else {
-        alert("no data");
-        if (data && data.msgBody) {
-          alert(data.msgBody);
-        }
-      }
     });
   };
 

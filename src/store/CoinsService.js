@@ -13,7 +13,7 @@ const CoinsService = {
           sparkline: false,
         })
     ).then((response) => {
-      if (response.status != 200) {
+      if (response.status !== 200) {
         return response.json().then(() => {
           const error = new Error(`Something went wrong! `);
           throw error;
@@ -26,7 +26,7 @@ const CoinsService = {
   // Method to get the details of the coin by ID
   getCoinDetailsById: (id) => {
     return fetch(apiURL + id).then((response) => {
-      if (response.status != 200) {
+      if (response.status !== 200) {
         return response.json().then((errResData) => {
           const error = new Error(
             `Something went wrong! ${errResData.data.msgBody}`
