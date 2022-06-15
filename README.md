@@ -1,10 +1,14 @@
-# Getting Started with Create React App
+# Browse Euro coins
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is web application where the user is able to view Euro coins from **CoinGecko**
 
 ## Available Scripts
 
-In the project directory, you can run:
+After downloading the project run the below script to download required libraries
+
+### `npm install`
+
+To start the project, you can run:
 
 ### `npm start`
 

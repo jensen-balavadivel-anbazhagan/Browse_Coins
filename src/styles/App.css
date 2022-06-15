@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: 5% 5% 5% 5%;
 }
 
 .App-logo {
@@ -36,3 +37,14 @@
     transform: rotate(360deg);
   }
 }
+.backward-link:before {
+  content: '\21E6';
+  padding: 10px;
+  }
+
+  .backward-link {
+    display: inline;
+    padding: 20px;
+    color: white;
+    font-weight:bold;
+    }
